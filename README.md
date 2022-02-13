@@ -15,5 +15,6 @@ This project has been developed for Synechron Interview purpose. It exposes thre
 	
 The application does not support words with special characters or numbers. If such words were passed then it will respond the respective error messages.
 
+Please update the germanToEnglishMap, frenchToEnglishMap & spanishToEnglishMap variable with the relevant data before testing the words in respective langauges.
 
 	
