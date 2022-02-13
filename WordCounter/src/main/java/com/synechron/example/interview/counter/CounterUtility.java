@@ -2,6 +2,7 @@ package com.synechron.example.interview.counter;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.TreeMap;
 import java.util.stream.Collectors;
 
@@ -38,7 +39,10 @@ public class CounterUtility {
 	 * @param word the word
 	 */
 	public String insertWord(String word) {
-		word = getTranslatedWord(word);
+		String translatedWord = getTranslatedWord(word);
+		if(Objects.nonNull(translatedWord)) {
+			word = translatedWord;
+		}
 		Words words = wordsMap.get(word);
 		if (words == null) {
 			wordsMap.put(word, new Words(word, 1L));
